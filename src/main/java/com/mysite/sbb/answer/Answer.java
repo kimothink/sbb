@@ -13,6 +13,8 @@ import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 import jakarta.persistence.ManyToOne;
+import java.util.Set;
+import jakarta.persistence.ManyToMany;
 
 @Getter
 @Setter
@@ -37,4 +39,7 @@ public class Answer {
 	
 	@ManyToOne
     private SiteUser author;
+	
+	@ManyToMany
+	Set<SiteUser> voter;
 }

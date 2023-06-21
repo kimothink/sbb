@@ -15,7 +15,8 @@ import jakarta.persistence.ManyToOne;
 
 import lombok.Getter;
 import lombok.Setter;
-
+import java.util.Set;
+import jakarta.persistence.ManyToMany;
 
 
 @Getter
@@ -44,4 +45,6 @@ public class Question {
 	@ManyToOne
     private SiteUser author;
 	
+	@ManyToMany
+	Set<SiteUser> voter;
 }
